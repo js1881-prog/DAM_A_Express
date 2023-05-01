@@ -17,8 +17,8 @@
 
 ## 🎯 고민 해본 부분
 
-- [-] 각각의 API가 적절한 Http Status를 클라이언트에게 보내주고 있는가?
-- [-] 보안 이슈 해결을 위한 HttpOnlyCookie를 이용한 jwt관리, 
+- [-] 상황마다 적절한 HTTP 상태 코드 반환하는가
+- [-] HttpOnlyCookie를 이용한 jwt관리
 - [-] Spring Hibernate Validator와 같은 [client request validate](https://github.com/padonan/DAM_A_Express/blob/main/src/middleware/validate/schema/productValidate.js)를 위한 Joi 라이브러리 사용 => XSS 공격,악의적인 사용자 차단 
 - [-] [passport](https://github.com/padonan/DAM_A_Express/blob/main/src/middleware/passport/passport.js)를 이용한 여러 인증 전략 구성 => 어떠한 api는 jwt 만기 시간만 체크하고, 어떠한 api는 user의 Role을 확인해야하기에,
       passport middleware를 미리 구성하여 코드의 재사용성을 높임.
