@@ -15,8 +15,7 @@ const User = require('../dao/userdao/mongoose/model/userModel.js');
 const buildResponse = require('../util/response/buildResponse.js');
 
 // /order/
-router.post(
-  '/',
+router.post('/',
   passport.authenticate('http-only-cookie-use-user', {
     session: false,
     failWithError: true,
