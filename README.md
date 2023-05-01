@@ -19,10 +19,10 @@
 
 - [-] 각각의 API가 적절한 Http Status를 클라이언트에게 보내주고 있는가?
 - [-] 보안 이슈 해결을 위한 HttpOnlyCookie를 이용한 jwt관리, 
-- [-] Spring Hibernate Validator와 같은 client request validate를 위한 Joi 라이브러리 사용 => XSS 공격,악의적인 사용자 차단 
-- [-] passport를 이용한 여러 인증 전략 구성 => 어떠한 api는 jwt 만기 시간만 체크하고, 어떠한 api는 user의 Role을 확인해야하기에,
+- [-] Spring Hibernate Validator와 같은 [client request validate](https://github.com/padonan/DAM_A_Express/blob/main/src/middleware/validate/schema/productValidate.js)를 위한 Joi 라이브러리 사용 => XSS 공격,악의적인 사용자 차단 
+- [-] [passport](https://github.com/padonan/DAM_A_Express/blob/main/src/middleware/passport/passport.js)를 이용한 여러 인증 전략 구성 => 어떠한 api는 jwt 만기 시간만 체크하고, 어떠한 api는 user의 Role을 확인해야하기에,
       passport middleware를 미리 구성하여 코드의 재사용성을 높임.
-- [-] Jest를 이용한 ServiceLayer TestCode 작성, TestCode의 커버리지를 높이기 위해 DAO-Service-Controller의 3-tier architecture구성.
+- [-] [Jest](https://github.com/padonan/DAM_A_Express/blob/main/src/test/service/productService.test.js)를 이용한 ServiceLayer TestCode 작성, TestCode의 커버리지를 높이기 위해 DAO-Service-Controller의 3-tier architecture구성.
 - [-] 예외 처리에 대한 고민, 3-tier 구조에서의 모든 에러는 최종적으로 Controller에서 catch하고, DAO,Service는 에러를 Controller로 throw,
        => 이러한 구조는 DAO에서 올라온 에러가 Service 레이어에서 겹치는 경우가 문제가 발생 할 수 있기에, 이와 같은 에러 처리 방식은 문제가 발생할 수 있음.
           최종적으로는 팀 컨벤션을 따르고, 반드시 처리해야하는 에러를 판단하여, 유동적으로 에러처리를 하는것이 좋다고 판단. 
