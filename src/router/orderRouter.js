@@ -4,7 +4,8 @@ const passport = require('passport');
 const orderController = require('../controller/orderController.js');
 const { validateOrder } = require('../middleware/validate/schema/orderValidate.js');
 
-// /order/
+// URL = /order
+
 router.post('/',
   passport.authenticate('http-only-cookie-use-user', {
     session: false,
