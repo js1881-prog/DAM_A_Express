@@ -1,0 +1,39 @@
+{
+  "name": "rescue_project",
+  "version": "1.0.0",
+  "description": "![20230417_102852](/uploads/d2c42a4069ef6c0d823501e802b96356/20230417_102852.png)",
+  "scripts": {
+    "start": "node src",
+    "start:dev": "nodemon --watch src/*",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.9.1",
+    "jsonwebtoken": "^9.0.0",
+    "moment-timezone": "^0.5.43",
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "p": "^0.2.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "pino": "^8.11.0",
+    "pino-pretty": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
