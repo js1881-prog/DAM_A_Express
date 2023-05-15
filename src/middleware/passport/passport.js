@@ -7,7 +7,7 @@ const logger = require("../../util/logger/logger.js");
 require('dotenv').config({ path: path.resolve(__dirname, '../../../.env') })
 
 const cookieExtractor = function(req) {
-  const token = req?.cookies?.['access_token'];  // 하나라도 없으면 undefined가 된다. => 연속 ?구문 feedback
+  const token = req?.cookies?.['access_token'];  
   return token 
 };
 
