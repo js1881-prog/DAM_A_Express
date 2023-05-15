@@ -4,8 +4,7 @@
 
 
   ### 💻 DAM_A Project
-  
-  ### - 사이트 링크 : [DAM_A_Site](http://34.64.252.224/pages/main-page/home-page.html)
+ 
   
   ### ***Elice.SW Track을 통해 경험한 토이 프로젝트입니다.***
 
