@@ -64,7 +64,6 @@ passport.use(
     },
     function (req, jwtPayload, done) // req 인수 추가
     {
-      // JWT에서 추출한 정보를 이용하여 사용자 조회하기
       User.findOne({ userName: jwtPayload.userName })
         .then((user) => {
           if (user && user.roleType === 'ADMIN') { // role이 ADMIN인 경우만 허용
